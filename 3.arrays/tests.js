@@ -4,6 +4,14 @@ describe("Задание 1 «Массивы»", () => {
       expect(compareArrays([1, 2, 3], [1, 2, 3])).toEqual(true)
     })
 
+    it("[1,2,3] === [1,'2',3]  false", () => {
+      expect(compareArrays([1, 2, 3], [1, '2', 3])).toEqual(false)
+    })
+
+    it("[1,2,3] === [1, 23, '']  false", () => {
+      expect(compareArrays([1, 2, 3], [1, 23, ''])).toEqual(false)
+    })
+
     it("[1, 2], [1, 2, 3] false", () => {
       expect(compareArrays([1, 2], [1, 2, 3])).toEqual(false)
     })
